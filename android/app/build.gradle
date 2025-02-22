@@ -29,6 +29,23 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+    flavorDimensions "flavor-type"
+
+    productFlavors {
+        dev {
+            dimension "flavor-type"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        staging {
+            dimension "flavor-type"
+            applicationIdSuffix ".staging"
+            versionNameSuffix "-staging"
+        }
+        prod {
+            dimension "flavor-type"
+        }
+    }
 
     buildTypes {
         release {
@@ -42,3 +59,4 @@ android {
 flutter {
     source = "../.."
 }
+
