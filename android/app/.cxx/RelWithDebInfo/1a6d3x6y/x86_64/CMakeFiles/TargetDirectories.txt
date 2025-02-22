@@ -1,0 +1,2 @@
+D:/repo/android/app/.cxx/RelWithDebInfo/1a6d3x6y/x86_64/CMakeFiles/edit_cache.dir
+D:/repo/android/app/.cxx/RelWithDebInfo/1a6d3x6y/x86_64/CMakeFiles/rebuild_cache.dir
