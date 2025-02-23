@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'app_text_style.dart';
 import 'app_theme_extension.dart';
 import 'color_schemes.dart';
 
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: DefaultColorScheme.light.background,
+    textTheme: AppTextTheme.fromColorScheme(DefaultColorScheme.light).textTheme,
     colorScheme: DefaultColorScheme.light,
     useMaterial3: true,
     extensions: [
@@ -42,6 +45,8 @@ class AppTheme {
 
   static final ThemeData darkTheme = ThemeData(
     colorScheme: DefaultColorScheme.dark,
+    scaffoldBackgroundColor: DefaultColorScheme.dark.background,
+    textTheme: AppTextTheme.fromColorScheme(DefaultColorScheme.dark).textTheme,
     useMaterial3: true,
     extensions: [
       AppThemeExtension(
