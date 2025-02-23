@@ -20,8 +20,12 @@ class HomeScreen extends StatelessWidget {
             const Text("Chế độ hiển thị"),
             BlocBuilder<ThemeCubit, ThemeMode>(
               builder: (context, themeMode) {
+                bool isDarkMode = (themeMode == ThemeMode.dark) ||
+                    (themeMode == ThemeMode.system &&
+                        MediaQuery.of(context).platformBrightness == Brightness.dark);
+
                 return Switch(
-                  value: themeMode == ThemeMode.dark,
+                  value: isDarkMode,
                   onChanged: (_) => themeCubit.toggleTheme(),
                 );
               },

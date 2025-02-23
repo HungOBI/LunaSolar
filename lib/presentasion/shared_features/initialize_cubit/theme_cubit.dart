@@ -5,10 +5,11 @@ class ThemeCubit extends Cubit<ThemeMode> {
   ThemeCubit() : super(ThemeMode.system);
 
   void toggleTheme() {
-    emit(state == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark);
-  }
-
-  void setTheme(ThemeMode mode) {
-    emit(mode);
+    if (state == ThemeMode.dark ||
+        (state == ThemeMode.system && WidgetsBinding.instance.window.platformBrightness == Brightness.dark)) {
+      emit(ThemeMode.light);
+    } else {
+      emit(ThemeMode.dark);
+    }
   }
 }
