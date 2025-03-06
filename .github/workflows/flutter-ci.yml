@@ -11,12 +11,14 @@ jobs:
     name: Build APK
     runs-on: ubuntu-latest
     container:
-      image: mobiledevops/flutter-sdk-image:3.16.3
+      image: mobiledevops/flutter-sdk-image
       options: --user root
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+
 
       - name: Install dependencies
         run: flutter pub get
