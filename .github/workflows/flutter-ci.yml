@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mobiledevops/flutter-sdk-image:3.16.3
+      options: --user root
 
     steps:
       - name: Checkout code
