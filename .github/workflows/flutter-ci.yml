@@ -11,7 +11,7 @@ jobs:
     name: Build APK
     runs-on: ubuntu-latest
     container:
-      image: mobiledevops/flutter-sdk-image
+      image: growerp/flutter-sdk-image
       options: --user root
 
     steps:
