@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: '17'
 
-      - uses: hungobi/flutter-action@v2
+      - uses: hungobi/LunaSolar
         with:
           flutter-version: 'stable'
 
