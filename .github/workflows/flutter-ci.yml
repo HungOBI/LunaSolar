@@ -18,16 +18,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Upgrade Dart SDK to 3.6.2
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y apt-transport-https
-          sudo sh -c 'wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
-          sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/flutter-archive-keyring.gpg] https://storage.googleapis.com/dart-archive/channels/stable/release/ latest main" > /etc/apt/sources.list.d/dart_stable.list'
-          sudo apt-get update
-          sudo apt-get install -y dart
-          dart --version
-
       - name: Install dependencies
         run: flutter pub get
 
