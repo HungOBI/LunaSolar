@@ -25,7 +25,7 @@ jobs:
           java-version: '17'
 
       - name: Set up java
-        uses: hungobi/LunaSolar
+        uses: hungobi/LunaSolar@v2
         with:
           flutter-version: 'stable'
 
