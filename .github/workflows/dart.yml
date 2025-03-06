@@ -16,13 +16,16 @@ jobs:
     name: Build APK
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v1
+      - name: Set up java
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
 
-      - uses: hungobi/LunaSolar
+      - name: Set up java
+        uses: hungobi/LunaSolar
         with:
           flutter-version: 'stable'
 
